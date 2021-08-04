@@ -1,10 +1,10 @@
 {
-  "name": "react-native-contacts",
+  "name": "@x-guard/react-native-contacts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rt2zz/react-native-contacts.git"
+    "url": "https://github.com/X-Guard/react-native-contacts.git"
   },
-  "version": "7.0.2",
+  "version": "7.0.3",
   "description": "React Native Contacts (android & ios)",
   "nativePackage": true,
   "keywords": [

@@ -768,6 +768,11 @@ public class ContactsManager extends ReactContextBaseJavaModule implements Activ
                 ContactsProvider contactsProvider = new ContactsProvider(cr);
                 WritableMap newlyAddedContact = contactsProvider.getContactByRawId(rawId);
 
+                ContentValues values = new ContentValues();
+                values.put(ContactsContract.Contacts.STARRED, 1);
+                cr.update(ContactsContract.Contacts.CONTENT_URI, values,
+                  ContactsContract.Contacts._ID +"=?", new String[]{rawId});
+
                 promise.resolve(newlyAddedContact); // success
             }
         } catch (Exception e) {
